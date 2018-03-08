@@ -1,0 +1,32 @@
+{
+  "name": "playcanvas-ar",
+  "version": "1.0.0",
+  "description": "Fast and Easy Augmented Reality for the Web",
+  "main": "src/index",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "preinstall": "openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem",
+    "start": "http-server -p 8081 --ssl" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NUVR/playcanvas-ar.git"
+  },
+  "keywords": [
+    "Augmented",
+    "Reality",
+    "AR",
+    "PlayCanvas"
+  ],
+  "author": "PlayCanvas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NUVR/playcanvas-ar/issues"
+  },
+  "homepage": "https://github.com/NUVR/playcanvas-ar#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

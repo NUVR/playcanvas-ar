@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
     <head>
-        <script src="http://code.playcanvas.com/playcanvas-latest.js"></script>
-        <script src="../artoolkit/artoolkit.min.js"></script>
+        <script src="https://code.playcanvas.com/playcanvas-latest.js"></script>
+        <script src="./artoolkit/artoolkit.min.js"></script>
     </head>
     <body style="overflow: hidden;">
+        Please enable your <a href="https://en.wikipedia.org/wiki/WebRTC">WebRTC-compatible</a> device.
         <script>
             // Create the canvas for our application
             var canvas = document.createElement("canvas");
@@ -23,10 +24,10 @@
             app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
 
             // Load PlayCanvasAR library scripts
-            app.assets.loadFromUrl("../src/playcanvas-ar.js", "script", function (err, asset) {
+            app.assets.loadFromUrl("./src/playcanvas-ar.js", "script", function (err, asset) {
 
                 // Create the AR-enabled camera using generic camera calibration settings
-                app.assets.loadFromUrl("../artoolkit/calibration/camera_para.dat", "binary", function (err, asset) {
+                app.assets.loadFromUrl("./artoolkit/calibration/camera_para.dat", "binary", function (err, asset) {
 
                     var camera = new pc.Entity("AR Camera");
                     camera.addComponent("camera", {
@@ -51,7 +52,7 @@
                 });
 
                 // Load the Hiro marker pattern and create a marker entity with it
-                app.assets.loadFromUrl("../artoolkit/markers/pattern/hiro.patt", "binary", function (err, asset) {
+                app.assets.loadFromUrl("./artoolkit/markers/pattern/hiro.patt", "binary", function (err, asset) {
 
                     var hiro = new pc.Entity("Hiro Marker");
                     hiro.addComponent("script");

@@ -1,7 +1,6 @@
 # PlayCanvasAR - Fast and Easy AR for the Web
 PlayCanvasAR makes it *easy* to build *lightning fast* augmented reality applications. With it, you can construct web-based AR applications with *zero programming* using the PlayCanvas Editor. Just drag in your 3D models and watch them appear in AR!
 
-![PlayCanvas Editor](/images/editor.png?raw=true)
 
 But if you want to create something more interactive, you can call on the full power of the [PlayCanvas scripting API](https://developer.playcanvas.com/en/api/).
 
@@ -10,9 +9,7 @@ Before you begin, print out the following markers: [Hiro](https://github.com/art
 
 Now click [here](https://playcanv.as/p/eJ1ygzym/) for a demonstration. We recommend running it on mobile. If you use iOS, you'll need to ensure you have upgraded to iOS 11, which is required to access the camera from Safari.
 
-Or check out a little video:
-
-[![YouTube video](/images/youtube_preview.png?raw=true)](http://www.youtube.com/watch?v=2Yo6hqr_tZw "Video Title")
+Or check out a little [YouTube video](http://www.youtube.com/watch?v=2Yo6hqr_tZw).
 
 ## Features
 
@@ -21,18 +18,10 @@ Or check out a little video:
 * **Incredible Visuals** - PlayCanvas provides an advanced WebGL graphics engine. It supports the latest WebGL 2 graphics API and implements Physically Based Rendering to achieve incredible visuals for your AR applications. And yes, [that's open sourced too](https://github.com/playcanvas/engine).
 
 ## Getting Started with PlayCanvasAR
-1. Create an account on [playcanvas.com](https://playcanvas.com) (if you haven't already).
-2. Fork the [AR Starter Kit](https://playcanvas.com/project/481413/overview) project (which contains the latest version of playcanvas-ar.js).
-3. Hit the launch button and see AR in action (we recommend using your mobile device!).
-
-## Configuring PlayCanvasAR in the Editor
-The playcanvas-ar.js script contains two script objects: arCamera and arMarker. The arCamera script renders a device's camera feed and tracks the feed image for AR markers. It can be added to an entity that has a camera component. The interface generated is as follows:
-
-![PlayCanvas Editor](/images/arcamera_editor_ui.png?raw=true)
-
-To create a new marker entity, simply add a script component and add the arMarker script. This will generate the following UI:
-
-![PlayCanvas Editor](/images/armarker_editor_ui.png?raw=true)
+1. Clone this repository and navigate inside the `playcanvas-ar` directory you have just created.
+2. Run `npm install`. This will download the required `http-server` dependency so that you can easily run this on a local machine.
+3. Run `npm run preinstall` to generate your SSL keys. These keys are not trusted by most browsers but this is okay for development. *NOTE*: In order for [WebRTC](https://en.wikipedia.org/wiki/WebRTC) to access your camera(s) on a mobile device, an SSL certificate must be installed.
+4. Run `npm run start` and navigate to `https://localhost:8081` in your browser.
 
 ## Scripting with PlayCanvasAR
 
